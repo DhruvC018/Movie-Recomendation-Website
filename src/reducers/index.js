@@ -4,3 +4,5 @@ export default function movies (state = [], action ) {
     }
     return state;
 }
+
+//Here the function name is movies and that is the reducer name as well.
