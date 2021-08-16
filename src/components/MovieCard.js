@@ -11,7 +11,7 @@ class MovieCard extends React.Component{
 
     handleUnFavouriteClick = () => {
         const { movie } = this.props;
-        this.props.dispatch(removeFromFavourite(movie));
+        this.props.dispatch(removeFromFavourite(movie))
     }
 
     render() {

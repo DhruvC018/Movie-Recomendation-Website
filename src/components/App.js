@@ -17,15 +17,15 @@ class App extends React.Component{
 
     //the flow:
     // We dispatch an action to update the movies and then the subscribe is called and then the console.log in line 23 is called.
-    store.dispatch(addMovies(data));
+    store.dispatch(addMovies(data)); //to add movie
 
     console.log('STATE', this.props.store.getState());
   }
 
   isMovieFavourite = (movie) => {
-    const { favourites } = this.props.store.getState();
+    const { movies } = this.props.store.getState();
 
-    const index = favourites.indexOf(movie);
+    const index = movies.favourites.indexOf(movie);
 
     if(index !== -1){
       //found the movie
@@ -39,8 +39,9 @@ class App extends React.Component{
   }
 
   render () {
-    console.log('RENDER', this.props.store.getState());
-    const { list, favourites, showfavourites } = this.props.store.getState();
+    const { movies } = this.props.store.getState();
+    console.log('RENDER', this.props.store.getState()); // {movies: {}, search:{} }
+    const { list, favourites, showfavourites } = movies; 
     
     const displayMovies = showfavourites ? favourites : list;
     console.log('Display movies', displayMovies);

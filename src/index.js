@@ -5,10 +5,11 @@ import { createStore } from 'redux';
 import './index.css';
 import App from './components/App';
 import reportWebVitals from './reportWebVitals';
-import movies from './reducers';
+import rootReducer from './reducers';
+
 
 //movies is the reducer name.
-const store = createStore(movies);
+const store = createStore(rootReducer);
 console.log('store',store);
 // console.log('Before sending the action state',store.getState());
 
