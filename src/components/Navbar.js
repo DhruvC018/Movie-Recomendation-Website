@@ -1,5 +1,7 @@
 // import { render } from '@testing-library/react';
 import React from 'react';
+import { data } from '../data';
+// import {add}
 
 class Navbar extends React.Component{
     render() {
